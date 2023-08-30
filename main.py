@@ -103,5 +103,5 @@ def guess():
     # renders a template with the guess from the model
     return render_template("guess.html", send=send, index=index, image=image_url, imagedata=image_data_full)
 
-
-app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
