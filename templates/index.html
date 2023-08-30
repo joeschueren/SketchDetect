@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+    <div class="main-container">
+        <div class="content-col main-col">
+            <div class="drawing-area">
+            <h1 class="title">Let Me Try To Guess What You Are Drawing!</h1>
+                <div class="content-container">
+                <div class="draw-box content-col">
+                    <canvas id="Canvas" class="canvas" width="400" height="400"></canvas>
+                </div>
+                <div class="list-box">
+                    <div class="list-header">
+                        <p>All Drawings</p>
+                    </div>
+                    <div class="list">
+                    <ul style="list-style-type: none;">
+                        <li>Umbrella</li>
+                        <li>House</li>
+                        <li>Sun</li>
+                        <li>Apple</li>
+                        <li>Envelope</li>
+                        <li>Star</li>
+                        <li>Heart</li>
+                        <li>Lightning Bolt</li>
+                        <li>Cloud</li>
+                        <li>Spoon</li>
+                        <li>Balloon</li>
+                        <li>Mug</li>
+                        <li>Mountains</li>
+                        <li>Fish</li>
+                        <li>Bowtie</li>
+                        <li>Ladder</li>
+                        <li>Ice Cream Cone</li>
+                        <li>Bow and Arrow</li>
+                        <li>Crescent Moon</li>
+                        <li>Smiley Face</li>
+                    </ul>
+                    </div>
+                </div>
+                    </div>
+                <div class="content-container">
+                    <div class="content-container button-container">
+                         <button class="button clear" id="clear">Clear</button>
+                    <form method="POST" action="guess" id="guess">
+                        <button class="button guess" id="guessButton" name="guess" value="guess">Guess Drawing!</button>
+                        <input type="hidden" name="image_data" id="image_data">
+                    </form>
+                    </div>
+                        <div class="content-container">
+
+                        </div>
+                </div>
+
+                </div>
+            </div>
+        <div class="content-col main-col">
+            <h1 class="about-header">About</h1>
+            <div class="about">
+
+            <p>This is a neural network that is designed to recognize hand drawn images. It is a convolutional
+                neural network that is trained on 6000 simple 2 dimensional drawings. It takes in a 400 x 400 pixel image and then
+                tries to determine which of the 20 possible drawings the user drew.</p>
+            <p>The model was created using tensorflow and keras in python. It is integrated into a flask application
+            to allow users to draw their own images and run them through the model to have it guess what the user has drawn.
+            Using a flask application allows a simple post request to run a users drawing through the model and return the results.</p>
+            <p>There are 3000 unique hand drawn images that the model is trained on, but 6000 total drawings after data
+            augmentation. All 3000 images are flipped horizontally, to allow the model to train on images facing either
+            direction, along with increasing the overall training examples to allow the model to generalize to new data better.</p>
+            <p>The model has about 87% accuracy guessing 300 different images that it hasn't been trained on. The accuracy could
+            be improved by collecting more training images, but I decided that the time investment to improve the model
+            is not worth the possible improvement. Another 3000 drawings would likely only increase the accuracy by less
+            than 5-10%, and would double the time spent making the model.</p>
+            <p>The model uses 4 convolutional layers which are all 2 dimensional, with 12 units per layer. Each one of these layers
+                uses an L2 regularization term, and the final two convolutional layers have dropout layers set to drop out 25% of
+                the units, to prevent overfitting. Each layer uses increasing kernel sizes, but all
+            layers use strides of length 1. The increasing kernel size is used to identify bigger patterns in the images
+            to generalize better to new images. The convolutional layer is then flattened and passed into a dense
+            layer, and then is passed to the output layer where the model decides which of the 20 drawings the input is
+            most likely to be.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/canvas.js')}}"></script>
+</div>
+</body>
+</html>

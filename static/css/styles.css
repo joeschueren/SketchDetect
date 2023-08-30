@@ -1,0 +1,246 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #222831;
+    color: white;
+    font-family: "Poppins";
+}
+
+.content-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80%;
+    margin: 5vh 0px;
+
+}
+
+.reveal{
+    flex-basis: 50%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+}
+
+.outcome{
+    text-align: center;
+}
+
+.disclaimer-text{
+    text-align: center;
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #00bfff;
+    font-size: 12px;
+}
+
+.guess{
+    margin-left: auto;
+}
+
+.button-container{
+    margin: 10px 0px;
+    flex-basis: 400px;
+    justify-content: space-evenly;
+}
+
+.content-col{
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.guess-title{
+    font-size: 32px;
+}
+
+.home-div{
+    height: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.guess-container{
+    margin-top: 50px;
+}
+
+.home{
+    position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	text-decoration: none;
+	background-color: #26a653;
+	color: white;
+	padding: 8px 17px;
+	border-radius: 5px;
+
+}
+
+
+.draw-box{
+    width: 50%;
+    flex-basis: 425px;
+    margin-bottom: 0px;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.list-box{
+    margin: 0px;
+    padding: 0px;
+    flex-basis: 150px;
+    height: 400px;
+}
+
+.list-header{
+    height: 24px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: grey;
+}
+
+.list{
+    margin-right: auto;
+    height: 345px;
+    overflow: auto;
+    width: 150px;
+    font-size: 16px;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.list::-webkit-scrollbar{
+    background-color: #222831;
+    width: 10px;
+}
+
+.list::-webkit-scrollbar-thumb{
+    background-color: grey;
+}
+
+li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.header{
+    height: 75px;
+    width: 100%;
+    background-color: #ffcf24;
+    margin: 0px;
+}
+.drawing-area{
+    margin-left: 5%;
+}
+
+.title{
+    color: white;
+    width: 400px;
+}
+
+.canvas{
+    border: 4px solid grey;
+    background-color: white;
+}
+
+.button{
+    border: none;
+    color: white;
+    background-color: #ffa200;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.clear{
+    background-color: #8f8f8f;
+    margin-right: auto;
+}
+
+.guess{
+    background-color: #26a653;
+}
+
+.send{
+    font-weight: 900;
+}
+
+.about{
+    padding: 10%;
+    padding-top: 0%;
+    margin-right: 20px;
+    height: 400px;
+    overflow: auto;
+    color: #d6d6d6;
+}
+
+.about-header{
+    padding-left: 10%;
+    padding-top 4%;
+    color: grey;
+}
+
+.about::-webkit-scrollbar{
+    background-color: ;
+    width: 10px;
+}
+
+.about::-webkit-scrollbar-thumb{
+    background-color: grey;
+}
+
+.main-col{
+    flex-basis: 50%;
+    margin-right: 0px;
+}
+
+@media (max-width: 1200px) {
+    .main-container{
+        flex-direction: column;
+    }
+
+    .main-col{
+        height: 50%;
+    }
+
+    .reveal{
+        flex-basis: 100%;
+    }
+    .reveal-container{
+        height: 100%;
+        margin: 20vh 0px;
+
+    }
+
+    .disclaimer-text{
+        font-size: 18px;
+    }
+
+}
+
+@media(max-height: 700px){
+    .main-container{
+        margin: 0px;
+    }
+}
