@@ -1,8 +1,12 @@
+:root{
+    --main-color: #2079c7;
+}
+
 body{
     margin: 0px;
     padding: 0px;
-    background-color: #222831;
-    color: white;
+    background-color: white;
+    color: #222831;
     font-family: "Poppins";
 }
 
@@ -46,7 +50,7 @@ body{
     width: 800px;
     margin-right: auto;
     margin-left: auto;
-    color: #00bfff;
+    color: var(--main-color);
     font-size: 12px;
 }
 
@@ -114,7 +118,7 @@ ul{
     height: 24px;
     font-size: 20px;
     margin-bottom: 25px;
-    color: grey;
+    color: var(--main-color);
 }
 
 .list{
@@ -123,17 +127,18 @@ ul{
     overflow: auto;
     width: 150px;
     font-size: 16px;
-    color: white;
+    color: var(--main-color);
     scroll-behavior: smooth;
 }
 
 .list::-webkit-scrollbar{
-    background-color: #222831;
+    background-color: white;
+    opacity: 20%;
     width: 10px;
 }
 
 .list::-webkit-scrollbar-thumb{
-    background-color: grey;
+    background-color: var(--main-color);
 }
 
 li{
@@ -152,12 +157,12 @@ li{
 }
 
 .title{
-    color: white;
+    color: var(--main-color);
     width: 400px;
 }
 
 .canvas{
-    border: 4px solid grey;
+    border: 4px solid var(--main-color);
     background-color: white;
 }
 
@@ -183,7 +188,8 @@ li{
 }
 
 .send{
-    font-weight: 900;
+    color: var(--main-color);
+    font-weight: 700;
 }
 
 .about{
@@ -192,22 +198,21 @@ li{
     margin-right: 20px;
     height: 400px;
     overflow: auto;
-    color: #d6d6d6;
+    color: #333333;
 }
 
 .about-header{
     padding-left: 10%;
-    padding-top 4%;
-    color: grey;
+    padding-top: 4%;
+    color: var(--main-color);
 }
 
 .about::-webkit-scrollbar{
-    background-color: ;
     width: 10px;
 }
 
 .about::-webkit-scrollbar-thumb{
-    background-color: grey;
+    background-color: var(--main-color);
 }
 
 .main-col{
